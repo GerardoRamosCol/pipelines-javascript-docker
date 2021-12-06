@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gerardoramoscolpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gerardoramoscolpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: gerardoramoscolpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gerardoramoscolpipelinesjavascriptdocker 
+          image: acrextprod.azurecr.io/gerardoramoscolpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
